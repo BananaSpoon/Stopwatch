@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/timeview"
+        android:textSize="40dp"
+        android:layout_above="@+id/pausebutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="53dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:id="@+id/startbutton"
+        android:onClick="startbuttonOnClick"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/pausebutton"
+        android:layout_toStartOf="@+id/pausebutton"
+        android:layout_marginRight="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAUSE"
+        android:id="@+id/pausebutton"
+        android:onClick="pausebuttonOnClick"
+        android:layout_alignTop="@+id/resetbutton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        android:id="@+id/resetbutton"
+        android:onClick="resetbuttonOnClick"
+        android:layout_alignTop="@+id/startbutton"
+        android:layout_toRightOf="@+id/pausebutton"
+        android:layout_toEndOf="@+id/pausebutton"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp" />
+</RelativeLayout>
